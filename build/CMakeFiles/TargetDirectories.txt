@@ -1,0 +1,3 @@
+/home/Elliot/Projects/tui-portfolio/build/CMakeFiles/main.dir
+/home/Elliot/Projects/tui-portfolio/build/CMakeFiles/edit_cache.dir
+/home/Elliot/Projects/tui-portfolio/build/CMakeFiles/rebuild_cache.dir
