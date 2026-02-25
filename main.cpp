@@ -1,26 +1,21 @@
 #include <ftxui/dom/elements.hpp>
+#include <ftxui/screen/color.hpp>
 #include <ftxui/screen/screen.hpp>
 #include <iostream>
  
 int main() {
-  using namespace ftxui;
  
-  // Create a simple document with three text elements.
-  Element document = hbox({
-    text("left")   | border,
-    text("middle") | border | flex,
-    text("right")  | border,
-  });
- 
-  // Create a screen with full width and height fitting the document.
-  auto screen = Screen::Create(
-    Dimension::Full(),       // Width
-    Dimension::Fit(document) // Height
+  auto screen = ftxui::Screen::Create(
+    ftxui::Dimension:: Full(),
+    ftxui::Dimension::Full()
   );
+
+  auto &pixel = screen.PixelAt(10, 5); 
  
-  // Render the document onto the screen.
-  Render(screen, document);
+  pixel.character = U'@';
+  pixel.background_color = ftxui::Color::Red;
+  pixel.foreground_color = ftxui::Color::Blue;
+  
  
-  // Print the screen to the console.
   screen.Print();
 }
