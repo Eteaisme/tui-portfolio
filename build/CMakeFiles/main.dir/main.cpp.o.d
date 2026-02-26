@@ -1,5 +1,6 @@
 CMakeFiles/main.dir/main.cpp.o: \
  /home/Elliot/Projects/tui-portfolio/main.cpp /usr/include/stdc-predef.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
  /usr/include/ftxui/dom/elements.hpp /usr/include/c++/15.2.1/functional \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
