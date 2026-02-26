@@ -1,50 +1,89 @@
+#include <ftxui/component/component.hpp>
 #include "ftxui/component/captured_mouse.hpp"  // for ftxui
-#include "ftxui/component/component.hpp"       // for Renderer, Button, Vertical
-#include "ftxui/component/component_base.hpp"  // for ComponentBase
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
 #include "ftxui/dom/elements.hpp"  // for operator|, Element, text, bold, border, center, color
 #include "ftxui/screen/color.hpp"  // for Color, Color::Red
+#include <cstdlib>
+#include <random>
 
-//Dev log(25/02/2026): 
+//Dev log(26/02/2026): 
 // Going to make interactive, event loop screen or whatever it's called
 // https://arthursonzogni.github.io/FTXUI/module-component-examples.html
 //
 //Copied exmaple from: 
 //https://www.arthursonzogni.com/FTXUI/doc/examples_2component_2renderer_8cpp-example.html
 //
+//https://www.youtube.com/watch?v=Ml0pl3K6oOk
+
+// 
+//
+
+
+// Copyright 2020 Arthur Sonzogni. All rights reserved.
+// Use of this source code is governed by the MIT license that can be found in
+// the LICENSE file.
+#include <memory>  // for allocator, __shared_ptr_access
+#include <string>  // for char_traits, operator+, string, basic_string
+ 
+#include "ftxui/component/captured_mouse.hpp"  // for ftxui
+#include "ftxui/component/component.hpp"       // for Input, Renderer, Vertical
+#include "ftxui/component/component_base.hpp"  // for ComponentBase
+#include "ftxui/component/component_options.hpp"  // for InputOption
+#include "ftxui/component/screen_interactive.hpp"  // for Component, ScreenInteractive
+#include "ftxui/dom/elements.hpp"  // for text, hbox, separator, Element, operator|, vbox, border
+#include "ftxui/util/ref.hpp"  // for Ref
+ 
 int main() {
   using namespace ftxui;
-  auto screen = ScreenInteractive::FitComponent();
  
-  // A Renderer() is a component using a lambda function as a parameter to
-  // render itself.
+  // The data:
+  std::string first_name;
+  std::string last_name;
+  std::string password;
+  std::string phoneNumber;
  
-  // 1. Example of focusable renderer:
-  auto renderer_focusable = Renderer([](bool focused) {
-    if (focused)
-      return text("FOCUSABLE RENDERER()") | center | bold | border;
-    else
-      return text(" Focusable renderer() ") | center | border;
+  // The basic input components:
+  Component input_first_name = Input(&first_name, "first name");
+  Component input_last_name = Input(&last_name, "last name");
+ 
+  // The password input component:
+  InputOption password_option;
+  password_option.password = true;
+  Component input_password = Input(&password, "password", password_option);
+ 
+  // The phone number input component:
+  // We are using `CatchEvent` to filter out non-digit characters.
+  Component input_phone_number = Input(&phoneNumber, "phone number");
+  input_phone_number |= CatchEvent([&](Event event) {
+    return event.is_character() && !std::isdigit(event.character()[0]);
+  });
+  input_phone_number |= CatchEvent([&](Event event) {
+    return event.is_character() && phoneNumber.size() > 10;
   });
  
-  // 2. Examples of a non focusable renderer.
-  auto renderer_non_focusable = Renderer([&] {
-    return text("~~~~~ Non Focusable renderer() ~~~~~");  //
+  // The component tree:
+  auto component = Container::Vertical({
+      input_first_name,
+      input_last_name,
+      input_password,
+      input_phone_number,
   });
  
-  // 3. Renderer can wrap other components to redefine their Render() function.
-  auto button = Button("Wrapped quit button", screen.ExitLoopClosure());
-  auto renderer_wrap = Renderer(button, [&] {
-    if (button->Focused())
-      return button->Render() | bold | color(Color::Red);
-    else
-      return button->Render();
+  // Tweak how the component tree is rendered:
+  auto renderer = Renderer(component, [&] {
+    return vbox({
+               hbox(text(" First name : "), input_first_name->Render()),
+               hbox(text(" Last name  : "), input_last_name->Render()),
+               hbox(text(" Password   : "), input_password->Render()),
+               hbox(text(" Phone num  : "), input_phone_number->Render()),
+               separator(),
+               text("Hello " + first_name + " " + last_name),
+               text("Your password is " + password),
+               text("Your phone number is " + phoneNumber),
+           }) |
+           border;
   });
  
-  // Let's renderer everyone:
-  screen.Loop(Container::Vertical({
-      renderer_focusable,
-      renderer_non_focusable,
-      renderer_wrap,
-  }));
+  auto screen = ScreenInteractive::TerminalOutput();
+  screen.Loop(renderer);
 }

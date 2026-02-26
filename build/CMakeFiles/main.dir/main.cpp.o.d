@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/main.cpp.o: \
  /home/Elliot/Projects/tui-portfolio/main.cpp /usr/include/stdc-predef.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
- /usr/include/ftxui/dom/elements.hpp /usr/include/c++/15.2.1/functional \
+ /usr/include/ftxui/component/component.hpp \
+ /usr/include/c++/15.2.1/functional \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -124,7 +124,12 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/15.2.1/backward/auto_ptr.h \
  /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/15.2.1/pstl/execution_defs.h \
- /usr/include/ftxui/dom/canvas.hpp /usr/include/c++/15.2.1/string \
+ /usr/include/c++/15.2.1/utility \
+ /usr/include/c++/15.2.1/bits/stl_relops.h \
+ /usr/include/ftxui/component/component_base.hpp \
+ /usr/include/ftxui/component/captured_mouse.hpp \
+ /usr/include/ftxui/dom/elements.hpp /usr/include/ftxui/dom/canvas.hpp \
+ /usr/include/c++/15.2.1/string \
  /usr/include/c++/15.2.1/bits/char_traits.h \
  /usr/include/c++/15.2.1/bits/localefwd.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
@@ -167,8 +172,7 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/ftxui/dom/requirement.hpp \
  /usr/include/ftxui/screen/screen.hpp \
  /usr/include/ftxui/screen/terminal.hpp \
- /usr/include/ftxui/util/autoreset.hpp /usr/include/c++/15.2.1/utility \
- /usr/include/c++/15.2.1/bits/stl_relops.h \
+ /usr/include/ftxui/util/autoreset.hpp \
  /usr/include/ftxui/dom/selection.hpp /usr/include/c++/15.2.1/sstream \
  /usr/include/c++/15.2.1/istream /usr/include/c++/15.2.1/ios \
  /usr/include/c++/15.2.1/bits/ios_base.h \
@@ -195,4 +199,52 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/monostate.h \
  /usr/include/c++/15.2.1/bits/parse_numbers.h \
  /usr/include/ftxui/dom/take_any_args.hpp \
- /usr/include/ftxui/dom/deprecated.hpp /usr/include/c++/15.2.1/iostream
+ /usr/include/ftxui/dom/deprecated.hpp \
+ /usr/include/ftxui/component/component_options.hpp \
+ /usr/include/c++/15.2.1/chrono /usr/include/c++/15.2.1/bits/chrono.h \
+ /usr/include/c++/15.2.1/ratio /usr/include/c++/15.2.1/limits \
+ /usr/include/c++/15.2.1/ctime /usr/include/ftxui/component/animation.hpp \
+ /usr/include/ftxui/component/screen_interactive.hpp \
+ /usr/include/c++/15.2.1/atomic /usr/include/ftxui/component/receiver.hpp \
+ /usr/include/c++/15.2.1/algorithm \
+ /usr/include/c++/15.2.1/bits/stl_algo.h \
+ /usr/include/c++/15.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/15.2.1/bits/stl_heap.h \
+ /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/15.2.1/condition_variable \
+ /usr/include/c++/15.2.1/bits/std_mutex.h \
+ /usr/include/c++/15.2.1/bits/unique_lock.h /usr/include/c++/15.2.1/mutex \
+ /usr/include/c++/15.2.1/queue /usr/include/c++/15.2.1/deque \
+ /usr/include/c++/15.2.1/bits/stl_deque.h \
+ /usr/include/c++/15.2.1/bits/deque.tcc \
+ /usr/include/c++/15.2.1/bits/stl_queue.h /usr/include/c++/15.2.1/thread \
+ /usr/include/c++/15.2.1/bits/std_thread.h \
+ /usr/include/c++/15.2.1/bits/this_thread_sleep.h \
+ /usr/include/ftxui/component/event.hpp \
+ /usr/include/ftxui/component/mouse.hpp \
+ /usr/include/ftxui/component/task.hpp /usr/include/c++/15.2.1/random \
+ /usr/include/c++/15.2.1/cmath /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
+ /usr/include/bits/iscanonical.h /usr/include/c++/15.2.1/bits/specfun.h \
+ /usr/include/c++/15.2.1/tr1/gamma.tcc \
+ /usr/include/c++/15.2.1/tr1/special_function_util.h \
+ /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
+ /usr/include/c++/15.2.1/tr1/beta_function.tcc \
+ /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
+ /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
+ /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
+ /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
+ /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
+ /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
+ /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
+ /usr/include/c++/15.2.1/bits/random.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
+ /usr/include/c++/15.2.1/bits/random.tcc /usr/include/c++/15.2.1/numeric \
+ /usr/include/c++/15.2.1/bits/stl_numeric.h \
+ /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h
