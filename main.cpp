@@ -41,8 +41,12 @@ int main() {
   auto foo = Container::Vertical({});
   auto document = Renderer(foo, [&]{
           return vbox({
-                  text("foobar")
+                  hbox(text("Foobar")) | border
                   }) | size(HEIGHT, GREATER_THAN, 40);
           });
  
+  //Fullscreen makes the program fullscreened, while terminal makes it inside the terminal, for our purposes we'll need fullscreen
+  //auto screen = ScreenInteractive::TerminalOutput();
+  auto screen = ScreenInteractive::Fullscreen();
+  screen.Loop(document);
 }
