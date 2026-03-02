@@ -1,11 +1,13 @@
 #include <ftxui/component/component.hpp>
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
 #include "ftxui/dom/elements.hpp"  // for operator|, Element, text, bold, border, center, color
+#include <ftxui/dom/deprecated.hpp>
 #include <ftxui/dom/node.hpp>
 #include <ftxui/screen/screen.hpp>
 
-//Dev log(26/02/2026): 
+//Dev log(01/03/2026): 
 // Add about me, footer and navbar. (static for now)
+//Catching up, haven't contribed for a couple days.
 //
 
 
@@ -19,7 +21,12 @@ int main() {
   auto foo = Container::Vertical({});
   auto document = Renderer(foo, [&]{
           return vbox({
-                  hbox(text("Foobar")) | border
+                  hbox({
+                        text("home"),
+                        text("projects"),
+                        text("contact")
+                          }) | border
+
                   //size here returns terminal size, not exactly sure what I'm piping to...
                   }) | size(HEIGHT, GREATER_THAN, 50);
           });
