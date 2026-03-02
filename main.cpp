@@ -9,10 +9,20 @@
 //Dev log(02/03/2026): 
 // Add about me, footer and navbar. (static for now)
 //Catching up, haven't contribed for a couple days.
-//
-//Added seperators, and we've got to justify, center
-//Seperate into differnt elements --> ELement, 
-
+// Add basic, page nav
+// Catch event example code: 
+//   auto screen = ScreenInteractive::TerminalOutput();
+//   auto renderer = Renderer([] {
+//     return text("My interface");
+//   });
+//   auto component = CatchEvent(renderer, [&](Event event) {
+//     if (event == Event::Character('q')) {
+//       screen.ExitLoopClosure()();
+//       return true;
+//     }
+//     return false;
+//   });
+//   screen.Loop(component);
 
 // Copyright 2020 Arthur Sonzogni. All rights reserved.
 // Use of this source code is governed by the MIT license that can be found in
@@ -42,9 +52,7 @@ int main() {
   auto document = Renderer(foo, [&]{
           return vbox({
                   navbar,
-
-
-
+                  about_me
                   //size here returns terminal size, not exactly sure what I'm piping to...
                   }) | size(HEIGHT, GREATER_THAN, 50);
           });
