@@ -22,19 +22,9 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
-  /usr/include/bits/flt-eval-method.h \
-  /usr/include/bits/fp-fast.h \
-  /usr/include/bits/fp-logb.h \
-  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
-  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
-  /usr/include/bits/math-vector.h \
-  /usr/include/bits/mathcalls-helper-functions.h \
-  /usr/include/bits/mathcalls-macros.h \
-  /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/mathcalls.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -142,15 +132,12 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/c++/15.2.1/bits/postypes.h \
   /usr/include/c++/15.2.1/bits/predefined_ops.h \
   /usr/include/c++/15.2.1/bits/ptr_traits.h \
-  /usr/include/c++/15.2.1/bits/random.h \
-  /usr/include/c++/15.2.1/bits/random.tcc \
   /usr/include/c++/15.2.1/bits/range_access.h \
   /usr/include/c++/15.2.1/bits/refwrap.h \
   /usr/include/c++/15.2.1/bits/requires_hosted.h \
   /usr/include/c++/15.2.1/bits/shared_ptr.h \
   /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
   /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
-  /usr/include/c++/15.2.1/bits/specfun.h \
   /usr/include/c++/15.2.1/bits/sstream.tcc \
   /usr/include/c++/15.2.1/bits/std_abs.h \
   /usr/include/c++/15.2.1/bits/std_function.h \
@@ -166,7 +153,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
-  /usr/include/c++/15.2.1/bits/stl_numeric.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
   /usr/include/c++/15.2.1/bits/stl_queue.h \
   /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h \
@@ -192,7 +178,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/c++/15.2.1/cerrno \
   /usr/include/c++/15.2.1/chrono \
   /usr/include/c++/15.2.1/clocale \
-  /usr/include/c++/15.2.1/cmath \
   /usr/include/c++/15.2.1/compare \
   /usr/include/c++/15.2.1/concepts \
   /usr/include/c++/15.2.1/condition_variable \
@@ -223,16 +208,13 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/c++/15.2.1/memory \
   /usr/include/c++/15.2.1/mutex \
   /usr/include/c++/15.2.1/new \
-  /usr/include/c++/15.2.1/numeric \
   /usr/include/c++/15.2.1/optional \
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/execution_defs.h \
   /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
-  /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
   /usr/include/c++/15.2.1/queue \
-  /usr/include/c++/15.2.1/random \
   /usr/include/c++/15.2.1/ratio \
   /usr/include/c++/15.2.1/sstream \
   /usr/include/c++/15.2.1/stdexcept \
@@ -241,18 +223,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/c++/15.2.1/string_view \
   /usr/include/c++/15.2.1/system_error \
   /usr/include/c++/15.2.1/thread \
-  /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
-  /usr/include/c++/15.2.1/tr1/beta_function.tcc \
-  /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
-  /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
-  /usr/include/c++/15.2.1/tr1/gamma.tcc \
-  /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
-  /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
-  /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
-  /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
-  /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
-  /usr/include/c++/15.2.1/tr1/special_function_util.h \
   /usr/include/c++/15.2.1/tuple \
   /usr/include/c++/15.2.1/type_traits \
   /usr/include/c++/15.2.1/typeinfo \
@@ -270,7 +240,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -314,7 +283,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/Elliot/Projects/tui-portfolio/main.cpp \
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
-  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -384,9 +352,15 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/sys/types.h:
 
+/usr/include/sys/select.h:
+
 /usr/include/sys/cdefs.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/wctype.h:
+
+/usr/include/sched.h:
 
 /usr/lib/libstdc++.so:
 
@@ -430,43 +404,29 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/ftxui/dom/direction.hpp:
 
-/usr/include/ftxui/dom/deprecated.hpp:
+/usr/include/c++/15.2.1/bits/ostream_insert.h:
 
-/usr/include/ftxui/dom/canvas.hpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
 
-/usr/include/ftxui/component/screen_interactive.hpp:
-
-/usr/include/ftxui/component/event.hpp:
-
-/usr/include/ftxui/component/component.hpp:
-
-/usr/include/ftxui/component/animation.hpp:
-
-/usr/include/features-time64.h:
-
-/usr/include/ctype.h:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/include/ftxui/component/mouse.hpp:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+/usr/include/c++/15.2.1/bits/ostream.tcc:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+/usr/include/c++/15.2.1/bits/ostream.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
+/usr/include/c++/15.2.1/bits/refwrap.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+/usr/include/c++/15.2.1/unordered_map:
+
+/usr/include/c++/15.2.1/bits/nested_exception.h:
+
+/usr/include/c++/15.2.1/bits/monostate.h:
+
+/usr/include/c++/15.2.1/bits/concept_check.h:
+
+/usr/include/c++/15.2.1/bits/memoryfwd.h:
 
 /usr/include/c++/15.2.1/cstdio:
-
-/usr/include/math.h:
 
 /usr/include/c++/15.2.1/bits/invoke.h:
 
@@ -478,6 +438,14 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/exception_ptr.h:
 
+/usr/lib/libc.so:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/c++/15.2.1/bits/ptr_traits.h:
+
+/usr/include/c++/15.2.1/queue:
+
 /usr/include/c++/15.2.1/bits/locale_facets.h:
 
 /usr/lib/libc_nonshared.a:
@@ -486,21 +454,25 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/ext/string_conversions.h:
 
+/usr/include/ftxui/dom/selection.hpp:
+
+/usr/include/c++/15.2.1/bits/exception.h:
+
 /usr/include/stdio.h:
 
 /usr/include/bits/wordsize.h:
 
 /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
 
-/usr/include/c++/15.2.1/bits/concept_check.h:
-
-/usr/include/c++/15.2.1/bits/monostate.h:
+/usr/include/c++/15.2.1/bits/charconv.h:
 
 /usr/include/c++/15.2.1/bits/basic_ios.tcc:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
-
 /usr/include/c++/15.2.1/cerrno:
+
+/usr/include/bits/types/wint_t.h:
+
+/usr/include/ftxui/component/task.hpp:
 
 /usr/include/bits/types/error_t.h:
 
@@ -508,27 +480,35 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/localefwd.h:
 
-/usr/include/ftxui/component/component_options.hpp:
-
-/usr/include/c++/15.2.1/bits/alloc_traits.h:
-
 /usr/include/asm/bitsperlong.h:
 
 /usr/include/c++/15.2.1/backward/auto_ptr.h:
+
+/usr/include/ftxui/component/screen_interactive.hpp:
+
+/usr/include/c++/15.2.1/bits/erase_if.h:
 
 /usr/include/c++/15.2.1/algorithm:
 
 /usr/include/c++/15.2.1/bits/stl_bvector.h:
 
-/usr/include/ftxui/component/receiver.hpp:
-
-/usr/include/c++/15.2.1/bits/hash_bytes.h:
-
 /usr/include/bits/wctype-wchar.h:
+
+/usr/include/c++/15.2.1/array:
+
+/usr/include/c++/15.2.1/bits/algorithmfwd.h:
+
+/usr/include/features-time64.h:
 
 /usr/include/bits/timesize.h:
 
 /usr/include/c++/15.2.1/bits/ios_base.h:
+
+/usr/include/ftxui/component/component.hpp:
+
+/usr/include/c++/15.2.1/bits/stringfwd.h:
+
+/usr/include/c++/15.2.1/bits/enable_special_members.h:
 
 /usr/include/c++/15.2.1/stdexcept:
 
@@ -536,25 +516,13 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/backward/binders.h:
 
-/usr/include/ftxui/component/task.hpp:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/c++/15.2.1/bits/memoryfwd.h:
+/usr/include/bits/types/timer_t.h:
 
 /usr/include/c++/15.2.1/bits/deque.tcc:
 
 /usr/include/c++/15.2.1/memory:
 
-/usr/include/c++/15.2.1/tr1/legendre_function.tcc:
-
 /usr/include/c++/15.2.1/bits/char_traits.h:
-
-/usr/include/ftxui/dom/selection.hpp:
-
-/usr/include/c++/15.2.1/bits/exception.h:
-
-/usr/include/bits/math-vector.h:
 
 /usr/include/stdc-predef.h:
 
@@ -574,6 +542,8 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/stl_pair.h:
 
+/usr/include/ctype.h:
+
 /usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/c++/15.2.1/bits/functexcept.h:
@@ -592,43 +562,17 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/bits/struct_rwlock.h:
 
-/usr/include/bits/types/sigset_t.h:
+/usr/include/bits/select.h:
 
-/usr/include/bits/types/mbstate_t.h:
+/usr/include/bits/types/__fpos64_t.h:
 
-/usr/include/bits/types/locale_t.h:
+/usr/include/c++/15.2.1/bits/atomic_base.h:
 
-/home/Elliot/Projects/tui-portfolio/main.cpp:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
-
-/usr/include/c++/15.2.1/bits/parse_numbers.h:
-
-/usr/include/c++/15.2.1/bits/allocated_ptr.h:
-
-/usr/include/c++/15.2.1/istream:
-
-/usr/include/bits/types/clock_t.h:
+/usr/include/bits/pthreadtypes-arch.h:
 
 /usr/include/bits/libc-header-start.h:
 
 /usr/include/c++/15.2.1/ostream:
-
-/usr/include/bits/iscanonical.h:
-
-/usr/include/wctype.h:
-
-/usr/include/sched.h:
-
-/usr/include/bits/fp-fast.h:
-
-/usr/include/bits/flt-eval-method.h:
-
-/usr/include/ftxui/dom/elements.hpp:
-
-/usr/include/bits/types/__locale_t.h:
-
-/usr/include/c++/15.2.1/bits/sstream.tcc:
 
 /usr/include/ftxui/screen/string.hpp:
 
@@ -636,15 +580,9 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/bits/locale.h:
 
-/usr/include/errno.h:
+/usr/include/c++/15.2.1/bits/node_handle.h:
 
-/usr/include/c++/15.2.1/tuple:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/ftxui/util/autoreset.hpp:
-
-/usr/include/c++/15.2.1/pstl/execution_defs.h:
+/usr/include/c++/15.2.1/bits/basic_string.tcc:
 
 /usr/include/bits/uintn-identity.h:
 
@@ -652,19 +590,13 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/std_mutex.h:
 
-/usr/include/c++/15.2.1/tr1/ell_integral.tcc:
-
 /usr/include/c++/15.2.1/bits/cpp_type_traits.h:
 
+/usr/include/c++/15.2.1/bits/streambuf.tcc:
+
+/usr/include/bits/cpu-set.h:
+
 /usr/include/bits/long-double.h:
-
-/usr/include/c++/15.2.1/bits/erase_if.h:
-
-/usr/include/c++/15.2.1/bits/algorithmfwd.h:
-
-/usr/include/c++/15.2.1/array:
-
-/usr/include/bits/fp-logb.h:
 
 /usr/include/c++/15.2.1/bits/hashtable_policy.h:
 
@@ -676,51 +608,59 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/bits/struct_mutex.h:
 
-/usr/lib/libc.so:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/c++/15.2.1/tr1/beta_function.tcc:
-
 /usr/include/bits/byteswap.h:
-
-/usr/include/c++/15.2.1/tr1/special_function_util.h:
 
 /usr/include/bits/time64.h:
 
 /usr/include/bits/stdlib-float.h:
 
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/home/Elliot/Projects/tui-portfolio/main.cpp:
+
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/include/c++/15.2.1/bits/parse_numbers.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
 
 /usr/include/asm-generic/int-ll64.h:
 
-/usr/include/bits/mathcalls-macros.h:
+/usr/include/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/c++/15.2.1/pstl/pstl_config.h:
+
+/usr/include/c++/15.2.1/bits/alloc_traits.h:
+
+/usr/include/ftxui/component/component_options.hpp:
 
 /usr/include/c++/15.2.1/bit:
 
 /usr/include/c++/15.2.1/bits/basic_ios.h:
 
+/usr/include/c++/15.2.1/bits/allocated_ptr.h:
+
+/usr/include/c++/15.2.1/istream:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/bits/types/__fpos_t.h:
+
+/usr/include/c++/15.2.1/bits/memory_resource.h:
+
+/usr/include/ftxui/component/component_base.hpp:
+
 /usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
-
-/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/c++/15.2.1/bits/unique_lock.h:
 
-/usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
-
-/usr/include/c++/15.2.1/bits/locale_classes.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/15.2.1/bits/ostream.h:
-
 /usr/include/bits/stdint-least.h:
-
-/usr/include/asm/types.h:
 
 /usr/include/c++/15.2.1/bits/hashtable.h:
 
@@ -746,20 +686,6 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/asm/posix_types.h:
 
-/usr/include/bits/mathcalls-narrow.h:
-
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/15.2.1/pstl/pstl_config.h:
-
-/usr/include/c++/15.2.1/bits/atomic_base.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
 /usr/include/bits/waitstatus.h:
 
 /usr/include/bits/wchar.h:
@@ -772,21 +698,25 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/ftxui/screen/terminal.hpp:
 
-/usr/include/c++/15.2.1/bits/stl_numeric.h:
-
 /usr/include/c++/15.2.1/bits/functional_hash.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/c++/15.2.1/bits/stl_relops.h:
 
 /usr/include/c++/15.2.1/bits/stl_algobase.h:
 
+/usr/include/bits/types/cookie_io_functions_t.h:
+
 /usr/include/c++/15.2.1/cstdlib:
 
+/usr/include/c++/15.2.1/bits/new_allocator.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/15.2.1/bits/locale_classes.h:
+
+/usr/include/bits/types/sigset_t.h:
+
 /usr/include/bits/types/time_t.h:
-
-/usr/include/c++/15.2.1/bits/charconv.h:
-
-/usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/c++/15.2.1/ios:
 
@@ -798,61 +728,41 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/type_traits:
 
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/c++/15.2.1/system_error:
+
+/usr/include/asm/errno.h:
+
+/usr/include/c++/15.2.1/bits/move.h:
+
+/usr/include/bits/types.h:
+
 /usr/include/features.h:
 
 /usr/include/bits/sched.h:
 
 /usr/include/bits/types/__FILE.h:
 
-/usr/include/ftxui/component/component_base.hpp:
+/usr/include/ftxui/dom/elements.hpp:
 
-/usr/include/c++/15.2.1/bits/memory_resource.h:
+/usr/include/bits/types/__locale_t.h:
 
-/usr/include/bits/types.h:
+/usr/include/c++/15.2.1/bits/sstream.tcc:
 
-/usr/include/c++/15.2.1/bits/move.h:
+/usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/c++/15.2.1/bits/nested_exception.h:
+/usr/include/ftxui/util/autoreset.hpp:
 
-/usr/include/c++/15.2.1/bits/enable_special_members.h:
+/usr/include/c++/15.2.1/pstl/execution_defs.h:
 
-/usr/include/c++/15.2.1/bits/stringfwd.h:
+/usr/include/bits/stdint-intn.h:
 
-/usr/include/c++/15.2.1/bits/new_allocator.h:
+/usr/include/bits/types/clockid_t.h:
 
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/asm/errno.h:
-
-/usr/include/c++/15.2.1/system_error:
-
-/usr/include/c++/15.2.1/bits/basic_string.tcc:
-
-/usr/include/c++/15.2.1/bits/node_handle.h:
-
-/usr/include/c++/15.2.1/bits/refwrap.h:
-
-/usr/include/bits/cpu-set.h:
-
-/usr/include/c++/15.2.1/bits/streambuf.tcc:
-
-/usr/include/c++/15.2.1/unordered_map:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
-
-/usr/include/c++/15.2.1/bits/ostream.tcc:
-
-/usr/include/c++/15.2.1/bits/ostream_insert.h:
-
-/usr/include/c++/15.2.1/queue:
-
-/usr/include/c++/15.2.1/bits/ptr_traits.h:
+/usr/include/asm/types.h:
 
 /usr/include/c++/15.2.1/bits/postypes.h:
-
-/usr/include/c++/15.2.1/bits/random.h:
-
-/usr/include/c++/15.2.1/bits/random.tcc:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
@@ -862,13 +772,9 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/shared_ptr.h:
 
-/usr/include/c++/15.2.1/tr1/bessel_function.tcc:
-
 /usr/include/c++/15.2.1/bits/locale_classes.tcc:
 
 /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/15.2.1/bits/specfun.h:
 
 /usr/include/linux/types.h:
 
@@ -880,23 +786,9 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/std_thread.h:
 
-/usr/lib/libftxui-component.a:
-
-/usr/include/ftxui/component/captured_mouse.hpp:
-
-/usr/include/c++/15.2.1/bits/stl_deque.h:
-
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/c++/15.2.1/random:
-
 /usr/include/c++/15.2.1/bits/stl_iterator.h:
 
 /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h:
-
-/usr/include/bits/mathcalls.h:
 
 /usr/include/c++/15.2.1/bits/stl_queue.h:
 
@@ -924,6 +816,10 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h:
 
+/usr/include/c++/15.2.1/tuple:
+
+/usr/include/errno.h:
+
 /usr/include/c++/15.2.1/bits/streambuf_iterator.h:
 
 /usr/include/bits/typesizes.h:
@@ -944,10 +840,6 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/uses_allocator.h:
 
-/usr/include/c++/15.2.1/bits/stl_relops.h:
-
-/usr/include/c++/15.2.1/tr1/hypergeometric.tcc:
-
 /usr/include/c++/15.2.1/bits/basic_string.h:
 
 /usr/include/c++/15.2.1/bits/uses_allocator_args.h:
@@ -963,12 +855,6 @@ CMakeFiles/main.dir/main.cpp.o:
 /usr/include/c++/15.2.1/bits/version.h:
 
 /usr/include/c++/15.2.1/clocale:
-
-/usr/include/stdint.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/15.2.1/cmath:
 
 /usr/include/c++/15.2.1/concepts:
 
@@ -992,10 +878,6 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/deque:
 
-/usr/include/c++/15.2.1/mutex:
-
-/usr/include/c++/15.2.1/ext/alloc_traits.h:
-
 /usr/include/c++/15.2.1/bits/cxxabi_forced.h:
 
 /usr/include/c++/15.2.1/ext/concurrence.h:
@@ -1008,9 +890,11 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/functional:
 
-/usr/include/c++/15.2.1/variant:
+/usr/lib/libftxui-component.a:
 
-/usr/include/c++/15.2.1/initializer_list:
+/usr/include/c++/15.2.1/bits/stl_deque.h:
+
+/usr/include/ftxui/component/captured_mouse.hpp:
 
 /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h:
 
@@ -1020,13 +904,9 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/optional:
 
-/usr/include/sys/select.h:
+/usr/include/c++/15.2.1/ext/alloc_traits.h:
 
-/usr/include/c++/15.2.1/numeric:
-
-/usr/include/c++/15.2.1/tr1/exp_integral.tcc:
-
-/usr/include/c++/15.2.1/pstl/glue_numeric_defs.h:
+/usr/include/c++/15.2.1/mutex:
 
 /usr/include/bits/floatn-common.h:
 
@@ -1038,18 +918,42 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/15.2.1/string_view:
 
+/usr/include/stdint.h:
+
+/usr/include/endian.h:
+
 /usr/include/c++/15.2.1/thread:
 
-/usr/include/c++/15.2.1/tr1/gamma.tcc:
-
-/usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/c++/15.2.1/tr1/poly_hermite.tcc:
-
-/usr/include/bits/types/__fpos_t.h:
-
-/usr/include/c++/15.2.1/tr1/riemann_zeta.tcc:
-
 /usr/include/c++/15.2.1/typeinfo:
+
+/usr/include/c++/15.2.1/initializer_list:
+
+/usr/include/c++/15.2.1/variant:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+
+/usr/include/ftxui/dom/deprecated.hpp:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+
+/usr/include/ftxui/component/mouse.hpp:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
+
+/usr/include/ftxui/component/animation.hpp:
+
+/usr/include/ftxui/component/event.hpp:
+
+/usr/include/c++/15.2.1/bits/hash_bytes.h:
+
+/usr/include/ftxui/component/receiver.hpp:
+
+/usr/include/ftxui/dom/canvas.hpp:

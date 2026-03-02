@@ -9,6 +9,7 @@
 // Add about me, footer and navbar. (static for now)
 //Catching up, haven't contribed for a couple days.
 //
+//Added seperators, and we've got to justify, center
 
 
 // Copyright 2020 Arthur Sonzogni. All rights reserved.
@@ -23,9 +24,20 @@ int main() {
           return vbox({
                   hbox({
                         text("home"),
+                        separator(),
                         text("projects"),
+                        separator(),
                         text("contact")
-                          }) | border
+                          }) 
+                  | border
+                  | center,
+
+
+                  vbox({
+                          text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"),
+                          text("ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"),
+                          text("ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"),
+                          })
 
                   //size here returns terminal size, not exactly sure what I'm piping to...
                   }) | size(HEIGHT, GREATER_THAN, 50);
