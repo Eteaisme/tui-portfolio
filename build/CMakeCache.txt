@@ -151,7 +151,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=tui-portfolio
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -232,6 +232,15 @@ Project_SOURCE_DIR:STATIC=/home/Elliot/Projects/tui-portfolio
 
 //The directory containing a CMake configuration file for ftxui.
 ftxui_DIR:PATH=/usr/lib/cmake/ftxui
+
+//Value Computed by CMake
+tui-portfolio_BINARY_DIR:STATIC=/home/Elliot/Projects/tui-portfolio/build
+
+//Value Computed by CMake
+tui-portfolio_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+tui-portfolio_SOURCE_DIR:STATIC=/home/Elliot/Projects/tui-portfolio
 
 
 ########################
