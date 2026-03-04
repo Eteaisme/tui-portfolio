@@ -14,31 +14,6 @@
 #include <string>
 using namespace ftxui;
 
- //  std::vector<std::string> menu_items = {"Home", "Settings", "About"};
- //  int selected = 0;
- //  std::string search;
- //
- //  auto menu = Menu(&menu_items, &selected);
- //  auto input = Input(&search, "Search...");
- //  auto layout = Container::Vertical({ input, menu });
- //
- //  auto renderer = Renderer(layout, [&] {
- //      return vbox({
- //          text("My App") | bold | hcenter,
- //          separator(),
- //          hbox({
- //              vbox({ text("Menu"), separator(), menu->Render() })
- //                  | border | size(WIDTH, EQUAL, 20),
- //              vbox({
- //                  input->Render() | border,
- //                  text("Selected: " + menu_items[selected]),
- //              }) | flex,
- //          }),
- //      }) | border;
- //  });
- //
- //  auto screen = ScreenInteractive::TerminalOutput();
- //  screen.Loop(renderer);
 int main() {
     //Horizontal & vertical containers can only hold components, what about elements?
     //Wait maybe I dont even need to...
@@ -48,13 +23,30 @@ int main() {
     // --> The labda function returns the element tree, note the sytax [&]{...} --> Return vbox...
     // --> Without compoenets, the component paramater can be ommited, and change can be handeled via CatchEvent. For example: 
     //          auto app = renderer([&]{return text("foobar")}); <-- No component passed in
-    std::string search;
-    auto navbar = Input(&search, "Search...");
-    auto layout = Container::Vertical({navbar});
 
-    auto renderer = Renderer(layout, [&]{
-            return  vbox({});
+    std::string current_page = "home"; 
+
+    auto renderer([&]{
+            Element content;
+                if (current_page == "home") content = text("foo");
+                if (current_page == "home") content = text("bar");
+                if (current_page == "home") content = text("chow");
+
+            return vbox({
+                        text("home | projects | contact") | border,
+                        separator(),
+                        content
+                    });
             });
+
+    auto app = CatchEvent(renderer, [&](Event event) {
+        if (event == Event::Character('h')) { current_page = "home";     return true; }
+        if (event == Event::Character('p')) { current_page = "projects"; return true; }
+        if (event == Event::Character('a')) { current_page = "about";    return true; }
+        return false; 
+    });
+    auto screen = ScreenInteractive::Fullscreen();
+    screen.Loop(app);
 }
   
  //   int main() {
