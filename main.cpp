@@ -8,23 +8,12 @@
 
 //Dev log(0403/2026): 
 // Going to try to go for itneractive by the end of the week.
-// Okay so it seems like render is only concerred with components, but for this, at least for now, all should be static (execpt for projects)
-// For this I'll go into a depper dive on how rendering actually works ig
+// Okay so it seems like render is only concerred with components, but for this, at least for now, all should be static ()
 #include <ftxui/component/component.hpp>
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 using namespace ftxui;
 
-int main() {
-    //Horizontal & vertical containers can only hold components, what about elements?
-    //Wait maybe I dont even need to...
-    std::string search;
-    auto navbar = Input(&search, "Search...");
-    auto layout = Container::Vertical({navbar});
-
-    auto renderer = Renderer(layout, [&]{
-            return  vbox({});
-            });
  //  std::vector<std::string> menu_items = {"Home", "Settings", "About"};
  //  int selected = 0;
  //  std::string search;
@@ -50,6 +39,22 @@ int main() {
  //
  //  auto screen = ScreenInteractive::TerminalOutput();
  //  screen.Loop(renderer);
+int main() {
+    //Horizontal & vertical containers can only hold components, what about elements?
+    //Wait maybe I dont even need to...
+    // ---NOTES FROM FTXUI DOCS---
+    // --> Renderer() takes in two paramaters, 1. A component & 2. a lamda that returns an element
+    // --> The component is what concens per. inputs, 
+    // --> The labda function returns the element tree, note the sytax [&]{...} --> Return vbox...
+    // --> Without compoenets, the component paramater can be ommited, and change can be handeled via CatchEvent. For example: 
+    //          auto app = renderer([&]{return text("foobar")}); <-- No component passed in
+    std::string search;
+    auto navbar = Input(&search, "Search...");
+    auto layout = Container::Vertical({navbar});
+
+    auto renderer = Renderer(layout, [&]{
+            return  vbox({});
+            });
 }
   
  //   int main() {
