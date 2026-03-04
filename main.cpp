@@ -29,8 +29,8 @@ int main() {
     auto renderer = Renderer([&] {
             Element content;
             if      (current_page == "home")     content = text("foo");
-            else if (current_page == "projects") content = text("bar");
-            else if (current_page == "about")    content = text("chow");
+            if (current_page == "projects") content = text("bar");
+            if (current_page == "about")    content = text("chow");
 
             return vbox({
                     text("home | projects | contact") | border,
