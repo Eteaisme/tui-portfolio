@@ -28,9 +28,9 @@ int main() {
 
     auto renderer = Renderer([&] {
             Element content;
-            if      (current_page == "home")     content = text("foo");
-            if (current_page == "projects") content = text("bar");
-            if (current_page == "about")    content = text("chow");
+            if (current_page == "home")          content = text("foo");
+            if (current_page == "projects")      content = text("bar");
+            if (current_page == "contact")       content = text("chow");
 
             return vbox({
                     text("home | projects | contact") | border,
@@ -42,7 +42,7 @@ int main() {
     auto app = CatchEvent(renderer, [&](Event event) {
             if (event == Event::Character('h')) { current_page = "home";     return true; }
             if (event == Event::Character('p')) { current_page = "projects"; return true; }
-            if (event == Event::Character('a')) { current_page = "about";    return true; }
+            if (event == Event::Character('c')) { current_page = "contact";    return true; }
             return false;
             });
 
