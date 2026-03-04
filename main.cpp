@@ -6,38 +6,46 @@
 #include <ftxui/dom/node.hpp>
 #include <ftxui/screen/screen.hpp>
 
-//Dev log(03/03/2026): 
+//Dev log(0403/2026): 
 // Going to try to go for itneractive by the end of the week.
 #include <ftxui/component/component.hpp>
 #include <ftxui/component/screen_interactive.hpp>
+#include <string>
 using namespace ftxui;
 
 int main() {
-    std::vector<std::string> menu_items = {"Home", "Settings", "About"};
-    int selected = 0;
     std::string search;
+    auto navbar = Input(&search, "Search...");
+    auto layout = Container::Vertical({navbar});
 
-    auto menu = Menu(&menu_items, &selected);
-    auto input = Input(&search, "Search...");
-    auto layout = Container::Vertical({ input, menu });
-
-    auto renderer = Renderer(layout, [&] {
-        return vbox({
-            text("My App") | bold | hcenter,
-            separator(),
-            hbox({
-                vbox({ text("Menu"), separator(), menu->Render() })
-                    | border | size(WIDTH, EQUAL, 20),
-                vbox({
-                    input->Render() | border,
-                    text("Selected: " + menu_items[selected]),
-                }) | flex,
-            }),
-        }) | border;
-    });
-
-    auto screen = ScreenInteractive::TerminalOutput();
-    screen.Loop(renderer);
+    auto renderer = Renderer(layout, [&]{
+            return  vbox({});
+            });
+ //  std::vector<std::string> menu_items = {"Home", "Settings", "About"};
+ //  int selected = 0;
+ //  std::string search;
+ //
+ //  auto menu = Menu(&menu_items, &selected);
+ //  auto input = Input(&search, "Search...");
+ //  auto layout = Container::Vertical({ input, menu });
+ //
+ //  auto renderer = Renderer(layout, [&] {
+ //      return vbox({
+ //          text("My App") | bold | hcenter,
+ //          separator(),
+ //          hbox({
+ //              vbox({ text("Menu"), separator(), menu->Render() })
+ //                  | border | size(WIDTH, EQUAL, 20),
+ //              vbox({
+ //                  input->Render() | border,
+ //                  text("Selected: " + menu_items[selected]),
+ //              }) | flex,
+ //          }),
+ //      }) | border;
+ //  });
+ //
+ //  auto screen = ScreenInteractive::TerminalOutput();
+ //  screen.Loop(renderer);
 }
   
  //   int main() {
