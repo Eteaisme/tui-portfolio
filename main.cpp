@@ -28,12 +28,17 @@ int main() {
 
     auto renderer = Renderer([&] {
             Element content;
-            if (current_page == "home")          content = text("foo");
-            if (current_page == "projects")      content = text("bar");
-            if (current_page == "contact")       content = text("chow");
+            if (current_page == "home")          content = text("home");
+            if (current_page == "projects")      content = text("projects");
+            if (current_page == "contact")       content = text("contacts");
+
+            Element navbar_h;
+            if (current_page == "home")          content = text(bold("h"),"ome");
+            Element navbar_p;
+            Element navbar_c;
 
             return vbox({
-                    text("home | projects | contact") | border,
+                    hbox(),
                     separator(),
                     content
                     });
