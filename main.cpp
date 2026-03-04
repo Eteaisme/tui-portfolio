@@ -24,27 +24,28 @@ int main() {
     // --> Without compoenets, the component paramater can be ommited, and change can be handeled via CatchEvent. For example: 
     //          auto app = renderer([&]{return text("foobar")}); <-- No component passed in
 
-    std::string current_page = "home"; 
+    std::string current_page = "home";
 
-    auto renderer([&]{
+    auto renderer = Renderer([&] {
             Element content;
-                if (current_page == "home") content = text("foo");
-                if (current_page == "home") content = text("bar");
-                if (current_page == "home") content = text("chow");
+            if      (current_page == "home")     content = text("foo");
+            else if (current_page == "projects") content = text("bar");
+            else if (current_page == "about")    content = text("chow");
 
             return vbox({
-                        text("home | projects | contact") | border,
-                        separator(),
-                        content
+                    text("home | projects | contact") | border,
+                    separator(),
+                    content
                     });
             });
 
     auto app = CatchEvent(renderer, [&](Event event) {
-        if (event == Event::Character('h')) { current_page = "home";     return true; }
-        if (event == Event::Character('p')) { current_page = "projects"; return true; }
-        if (event == Event::Character('a')) { current_page = "about";    return true; }
-        return false; 
-    });
+            if (event == Event::Character('h')) { current_page = "home";     return true; }
+            if (event == Event::Character('p')) { current_page = "projects"; return true; }
+            if (event == Event::Character('a')) { current_page = "about";    return true; }
+            return false;
+            });
+
     auto screen = ScreenInteractive::Fullscreen();
     screen.Loop(app);
 }
