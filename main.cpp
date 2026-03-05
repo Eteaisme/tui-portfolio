@@ -23,7 +23,6 @@ int main() {
     // --> The labda function returns the element tree, note the sytax [&]{...} --> Return vbox...
     // --> Without compoenets, the component paramater can be ommited, and change can be handeled via CatchEvent. For example: 
     //          auto app = renderer([&]{return text("foobar")}); <-- No component passed in
-
     std::string current_page = "home";
 
     auto renderer = Renderer([&] {
@@ -32,13 +31,17 @@ int main() {
             if (current_page == "projects")      content = text("projects");
             if (current_page == "contact")       content = text("contacts");
 
-            Element navbar_h;
-            if (current_page == "home")          content = text(bold("h"),"ome");
-            Element navbar_p;
-            Element navbar_c;
+            Element navbar = hbox({
+                    (current_page == "home") ? text("h") | bold : text("h"), 
+                    text("ome"),
+                    (current_page == "projects") ? text("p") | bold : text("p"), 
+                    text("rojects"),
+                    (current_page == "contact") ? text("c") | bold : text("c"), 
+                    text("ontact"),
+                    });
 
             return vbox({
-                    hbox(),
+                    navbar,
                     separator(),
                     content
                     });
