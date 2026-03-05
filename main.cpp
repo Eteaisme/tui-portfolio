@@ -33,9 +33,9 @@ int main() {
 
             Element navbar = hbox({
                     (current_page == "home") ? text("h") | bold : text("h"), 
-                    text("ome"),
+                    text("ome | "),
                     (current_page == "projects") ? text("p") | bold : text("p"), 
-                    text("rojects"),
+                    text("rojects | "),
                     (current_page == "contact") ? text("c") | bold : text("c"), 
                     text("ontact"),
                     });
