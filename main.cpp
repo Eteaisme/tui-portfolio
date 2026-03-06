@@ -9,7 +9,9 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 
-//Dev log(04/03/2026): 
+//Dev log(06/03/2026): 
+//Now that we have basic func., we can look to start filling out the portfolio. For now, I think this is all
+//the util. this will require acutally, besides maybe the project section? idk.
 using namespace ftxui;
 
 int main() {
