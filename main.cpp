@@ -22,9 +22,14 @@ int main() {
                         text("Hi, my name is Elliot. I'm a first-year Computer Science student at the"),
                         text("University of guelph. I enjoy specialty coffe, reading, music"),
                         text("math and computers. Currently looking for S26 work.")
-                    });
+                    }) | center;
             if (current_page == "projects")      content = text("projects");
-            if (current_page == "contact")       content = text("contact me at: tame@uoguelph.ca");
+            if (current_page == "contact")       content = vbox({
+                    text("email me at: "),
+                    hyperlink("mailto:tame@uoguelph.ca", text("tame@uoguelph.ca")) | bold,
+                    text("follow me at: "),
+                    hyperlink("github.com/Eteaisme", text("github.com/Eteaisme")) | bold,
+                    });
 
 
             Element navbar = hbox({
@@ -42,7 +47,7 @@ int main() {
             return vbox({
                     navbar,
                     separator(),
-                    content | border | size(WIDTH, EQUAL, 80),
+                    content | border | size(WIDTH, EQUAL, 80) | size(HEIGHT, EQUAL, 15),
                     separator(),
                     footer,
                     }) | center;
