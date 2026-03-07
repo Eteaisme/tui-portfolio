@@ -24,6 +24,7 @@ int main() {
             if (current_page == "projects")      content = text("projects");
             if (current_page == "contact")       content = text("contact me at: tame@uoguelph.ca");
 
+
             Element navbar = hbox({
                     (current_page == "home") ? text("h") | bold : text("h"), 
                     text("ome | "),
@@ -33,10 +34,15 @@ int main() {
                     text("ontact"),
                     }) | center;
 
+            Element footer = hbox({
+                    text("Made with  &  in 🇨🇦")
+                    }) | center;
             return vbox({
                     navbar,
                     separator(),
-                    content | border | size(WIDTH, EQUAL, 80)
+                    content | border | size(WIDTH, EQUAL, 80),
+                    separator(),
+                    footer,
                     }) | center;
             });
 
