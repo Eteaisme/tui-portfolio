@@ -31,12 +31,12 @@ int main() {
                     text("rojects | "),
                     (current_page == "contact") ? text("c") | bold : text("c"), 
                     text("ontact"),
-                    });
+                    }) | center;
 
             return vbox({
-                    navbar ,
+                    navbar,
                     separator(),
-                    content | border
+                    content | border | size(WIDTH, EQUAL, 80)
                     }) | center;
             });
 
