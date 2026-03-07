@@ -9,8 +9,10 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 
-//Dev log(06/03/2026): 
-//Sizing looks good now, ig. it's just filling out about & contact :)
+//Dev log(07/03/2026): 
+//I think what we have so far wrt the acutal portfolio is fine at this point. I would
+//be content having this up. next steps I think are writing main.go and figuring out
+//a hosting plan.
 using namespace ftxui;
 
 int main() {
@@ -23,7 +25,7 @@ int main() {
                         text("University of guelph. I enjoy specialty coffe, reading, music"),
                         text("math and computers. Currently looking for S26 work.")
                     }) | center;
-            if (current_page == "projects")      content = text("projects");
+            if (current_page == "projects")      content = text("under construction...");
             if (current_page == "contact")       content = vbox({
                     text("email me at: "),
                     hyperlink("mailto:tame@uoguelph.ca", text("tame@uoguelph.ca")) | bold,
