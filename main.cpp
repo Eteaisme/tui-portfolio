@@ -10,9 +10,7 @@
 #include <string>
 
 //Dev log(06/03/2026): 
-//Now that we have basic func., we can look to start filling out the portfolio. For now, I think this is all
-//the util. this will require acutally, besides maybe the project section? idk.
-//Ok, now we have to deal w. sizing. That will be next, make template for content and then maybe split up sections?
+//Sizing looks good now, ig. it's just filling out about & contact :)
 using namespace ftxui;
 
 int main() {
