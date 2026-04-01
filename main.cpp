@@ -24,13 +24,13 @@ int main() {
                         text("University of guelph. I enjoy specialty coffe, reading, music"),
                         text("math and computers. Currently looking for S26 work.")
                     }) | center;
-            if (current_page == "projects")      content = text("under construction...");
+            if (current_page == "projects")      content = hbox({
+                    italic(text("under construction..."))
+                    }) | center;
             if (current_page == "contact")       content = vbox({
-                    text("email me at: "),
-                    hyperlink("mailto:tame@uoguelph.ca", text("tame@uoguelph.ca")) | bold,
-                    text("follow me at: "),
-                    hyperlink("github.com/Eteaisme", text("github.com/Eteaisme")) | bold,
-                    });
+                    text("email me at:  tame@uoguelph.ca"),
+                    text("follow me at: github.com/Eteaisme"),
+                    }) | center;
 
 
             Element navbar = hbox({
