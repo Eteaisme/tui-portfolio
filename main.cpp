@@ -26,7 +26,7 @@ int main() {
                     text("under construction...") | dim,
                     }) | center;
             if (current_page == "contact")       content = vbox({
-                    hbox({text("email me at: "), text("tame@uoguelph.ca") | bold}),
+                    hbox({text("email me at: "), text(" tame@uoguelph.ca") | bold}),
                     hbox({text("follow me at: "), text("Github.com/Eteaisme") | bold}),
                     }) | center;
 
