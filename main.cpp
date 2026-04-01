@@ -9,9 +9,7 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 
-//Dev log(07/03/2026): I think what we have so far wrt the acutal portfolio is fine at this point. I would
-//be content having this up. next steps I think are writing main.go and figuring out
-//a hosting plan.
+//dev log: began working on server, add md file for build instructions
 using namespace ftxui;
 
 int main() {
@@ -25,7 +23,7 @@ int main() {
                         text("math and computers. Currently looking for S26 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
-                    text("under construction...") | italic
+                    text("under construction...") | italic,
                     }) | center;
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text("tame@uoguelph.ca") | bold}),
