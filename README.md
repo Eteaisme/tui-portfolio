@@ -27,5 +27,5 @@ cmake --build build
 ## Run
 
 ```bash
-./build/tui-porftoflio
+./build/main
 ```
