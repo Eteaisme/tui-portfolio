@@ -25,6 +25,9 @@ int main() {
             if (current_page == "projects")      content = hbox({
                     text("under construction...") | dim,
                     }) | center;
+            if (current_page == "blog")      content = hbox({
+                    text("under construction...") | dim,
+                    }) | center;
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text(" tame@uoguelph.ca") | bold}),
                     hbox({text("follow me at: "), text("Github.com/Eteaisme") | bold}),
@@ -36,6 +39,8 @@ int main() {
                     text("ome | "),
                     (current_page == "projects") ? text("p") | bold : text("p"), 
                     text("rojects | "),
+                    (current_page == "blog") ? text("b") | bold : text("b"), 
+                    text("log | "),
                     (current_page == "contact") ? text("c") | bold : text("c"), 
                     text("ontact"),
                     }) | center;
@@ -57,6 +62,7 @@ int main() {
             if (event == Event::Character('h')) { current_page = "home";     return true; }
             if (event == Event::Character('p')) { current_page = "projects"; return true; }
             if (event == Event::Character('c')) { current_page = "contact";  return true; }
+            if (event == Event::Character('b')) { current_page = "blog";  return true; }
             if (event == Event::Character('q')) { screen.Exit();  }
             return false;
             });
