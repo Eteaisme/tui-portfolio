@@ -23,7 +23,7 @@ int main() {
                         text("math and computers. Currently looking for S26 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
-                    text("under construction...") | italic,
+                    text("under construction...") | dim,
                     }) | center;
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text("tame@uoguelph.ca") | bold}),
