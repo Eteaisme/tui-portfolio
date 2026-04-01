@@ -9,11 +9,13 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 
-//dev log: began working on server, add md file for build instructions
+//dev log April 1st 2026: In Montreal so don't have acsess to physical server
+// Guess it's about time that I fill out the project section
 using namespace ftxui;
 
 int main() {
     std::string current_page = "home";
+    int project_slected { 0 };
 
     auto renderer = Renderer([&] {
             Element content;
