@@ -9,8 +9,7 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 
-//Dev log(07/03/2026): 
-//I think what we have so far wrt the acutal portfolio is fine at this point. I would
+//Dev log(07/03/2026): I think what we have so far wrt the acutal portfolio is fine at this point. I would
 //be content having this up. next steps I think are writing main.go and figuring out
 //a hosting plan.
 using namespace ftxui;
@@ -55,13 +54,14 @@ int main() {
                     }) | center;
             });
 
+    auto screen = ScreenInteractive::Fullscreen();
     auto app = CatchEvent(renderer, [&](Event event) {
             if (event == Event::Character('h')) { current_page = "home";     return true; }
             if (event == Event::Character('p')) { current_page = "projects"; return true; }
             if (event == Event::Character('c')) { current_page = "contact";  return true; }
+            if (event == Event::Character('q')) { screen.Exit();  }
             return false;
             });
 
-    auto screen = ScreenInteractive::Fullscreen();
     screen.Loop(app);
 }
