@@ -21,7 +21,7 @@ int main() {
             Element content;
             if (current_page == "home")          content = vbox({
                         text("Hi, my name is Elliot. I'm a first-year Computer Science student at the"),
-                        text("University of guelph. I enjoy specialty coffe, reading, music"),
+                        text("University of guelph. I enjoy specialty coffe, reading, music,"),
                         text("math and computers. Currently looking for S26 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
