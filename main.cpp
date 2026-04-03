@@ -48,7 +48,8 @@ int main() {
                     }) | center;
 
             Element footer = hbox({
-                    text("Made with  &  in 🇨🇦")
+                    text("Made with  &  in 🇨🇦 "),
+                    text("q: quit") | dim,
                     }) | center;
             return vbox({
                     navbar,
