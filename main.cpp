@@ -9,8 +9,6 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 
-//dev log April 1st 2026: In Montreal so don't have acsess to physical server
-// Guess it's about time that I fill out the project section
 using namespace ftxui;
 
 int main() {
@@ -20,9 +18,9 @@ int main() {
     auto renderer = Renderer([&] {
             Element content;
             if (current_page == "home")          content = vbox({
-                        text("Hey, my name is Elliot. I'm a first-year Computer Science student at the"),
+                        text("Hello, my name is Elliot. I'm a second-year Computer Science student at the"),
                         text("University of guelph. I enjoy specialty coffe, reading, music,"),
-                        text("math and computers. Currently looking for S26 work.")
+                        text("math and computers. Currently looking for W27 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
                     text("under construction...") | dim,
@@ -69,6 +67,5 @@ int main() {
             if (event == Event::Character('q')) { screen.Exit();  }
             return false;
             });
-
     screen.Loop(app);
 }
