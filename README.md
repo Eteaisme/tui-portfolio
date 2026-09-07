@@ -1,6 +1,5 @@
 # tui-portfolio
 
-
 A terminal UI portfolio, served over SSH from a self-hosted home server.
 
 ```bash
