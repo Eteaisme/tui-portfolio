@@ -23,10 +23,10 @@ int main() {
                         text("math and computers. Currently looking for W27 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
-                    text("under construction...") | dim,
+                    text("Under construction...") | dim,
                     }) | center;
             if (current_page == "blog")      content = hbox({
-                    text("under construction...") | dim,
+                    text("Under construction...") | dim,
                     }) | center;
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text(" tame@uoguelph.ca") | bold}),
