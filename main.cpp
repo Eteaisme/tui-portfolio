@@ -14,23 +14,39 @@
 
 using namespace ftxui;
 Component Project_Menu (std::vector<std::string>* entries, int* selected);
+Component Blog_Menu    (std::vector<std::string>* entries, int* selected);
 
 int main() {
+
+    std::string current_page = "home";
     std::vector<std::string> pages {"home", "projects", "contact", "blog" };
     int page_selected {0};
-    std::string current_page = "home";
 
     int entry_selected {0};
     std::vector<std::string> project_entries{
         "project 1               ", "project 2", "project 3", "project 3" 
     };
     std::vector<std::string> project_descriptions {
-        "project 1 desc.", 
-        "project 2 desc.", 
-        "project 3 desc.", 
+        "project 1 desc.",  //tui portfolio
+        "project 2 desc.",  //linux conf
+        "project 3 desc.",  //personal site
         "project 4 desc. ", 
     };
+
+    std::vector<std::string> blog_entries{
+        "blog entry 1               ", "blog entry 2", "blog entry 3", "blog entry 4" 
+    };
+    std::vector<std::string> blog_content{
+        "article 1 content",  
+        "article 2 content",  
+        "article 3 content",  
+        "article 4 content", 
+    };
+
+
+
     auto project_menu = Project_Menu(&project_entries, &entry_selected);
+    auto blog_menu    = Blog_Menu(&blog_entries, &entry_selected);
 
     auto renderer = Renderer([&] {
             Element content;
@@ -42,11 +58,19 @@ int main() {
             if (current_page == "projects") content = hbox({
                     project_menu->Render(),                         
                     separator(),
-                    text(project_descriptions[entry_selected]), 
+                    vbox({
+                            text(project_entries[entry_selected]) | bold, 
+                            text(project_descriptions[entry_selected]), 
+                            })
                     });
             if (current_page == "blog")  content = hbox({
-                    text("Under construction...") | dim,
-                    }) | center;
+                    blog_menu->Render(),                         
+                    separator(),
+                    vbox({
+                    text(blog_entries[entry_selected]) | bold, 
+                    text(blog_content[entry_selected]), 
+                            })
+                    });
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text(" tame@uoguelph.ca") | bold}),
                     hbox({text("follow me at: "), text("Github.com/Eteaisme") | bold}),
@@ -97,6 +121,19 @@ int main() {
 }
 
 Component Project_Menu(std::vector<std::string>* entries, int* selected) {
+  auto option = MenuOption::Vertical();
+  option.entries_option.transform = [](EntryState state) {
+    state.label = (state.active ? "> " : "  ") + state.label;
+    Element e = text(state.label);
+    if (state.active) {
+      e = e | bold;
+    }
+    return e;
+  };
+  return Menu(entries, selected, option);
+}
+ 
+Component Blog_Menu(std::vector<std::string>* entries, int* selected) {
   auto option = MenuOption::Vertical();
   option.entries_option.transform = [](EntryState state) {
     state.label = (state.active ? "> " : "  ") + state.label;
