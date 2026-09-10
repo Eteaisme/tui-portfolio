@@ -22,7 +22,13 @@ int main() {
 
     int entry_selected {0};
     std::vector<std::string> project_entries{
-        "Foo                   ", "Bar", "Quux", "Baz" 
+        "project 1               ", "project 2", "project 3", "project 3" 
+    };
+    std::vector<std::string> project_descriptions {
+        "project 1 desc.", 
+        "project 2 desc.", 
+        "project 3 desc.", 
+        "project 4 desc. ", 
     };
     auto project_menu = Project_Menu(&project_entries, &entry_selected);
 
@@ -36,6 +42,7 @@ int main() {
             if (current_page == "projects") content = hbox({
                     project_menu->Render(),                         
                     separator(),
+                    text(project_descriptions[entry_selected]), 
                     });
             if (current_page == "blog")  content = hbox({
                     text("Under construction...") | dim,
