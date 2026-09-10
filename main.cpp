@@ -8,12 +8,19 @@
 #include <ftxui/component/component.hpp>
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
+#include <vector>
 
 using namespace ftxui;
+Component Project_Menu (std::vector<std::string>* entries, int* selected);
 
 int main() {
     std::string current_page = "home";
-    int project_slected { 0 };
+
+    std::vector<int> project_selected{0, 1, 2, 3, 4};
+    std::vector<std::string> project_entries{
+        "Foo", "Bar", "Quux", "Baz" 
+    };
+    auto project_menu = Project_Menu(&project_entries, &project_selected[0]);
 
     auto renderer = Renderer([&] {
             Element content;
@@ -23,7 +30,8 @@ int main() {
                         text("math and computers. Currently looking for W27 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
-                    text("Under construction...") | dim,
+                    project_menu->Render(),                         
+                    //text("Under construction...") | dim,
                     }) | center;
             if (current_page == "blog")      content = hbox({
                     text("Under construction...") | dim,
@@ -69,3 +77,20 @@ int main() {
             });
     screen.Loop(app);
 }
+
+Component Project_Menu(std::vector<std::string>* entries, int* selected) {
+  auto option = MenuOption::Vertical();
+  option.entries_option.transform = [](EntryState state) {
+    state.label = (state.active ? "> " : "  ") + state.label;
+    Element e = text(state.label);
+    if (state.focused) {
+      e = e | bgcolor(Color::Blue);
+    }
+    if (state.active) {
+      e = e | bold;
+    }
+    return e;
+  };
+  return Menu(entries, selected, option);
+}
+ 
