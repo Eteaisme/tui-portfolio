@@ -32,8 +32,8 @@ int main() {
                         text("math and computers. Currently looking for W27 work.")
                     }) | center;
             if (current_page == "projects")      content = hbox({
+                    text("Under construction...") | dim,
                     project_menu->Render(),                         
-                    //text("Under construction...") | dim,
                     }) | center;
             if (current_page == "blog")      content = hbox({
                     text("Under construction...") | dim,
