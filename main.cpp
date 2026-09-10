@@ -24,8 +24,12 @@ int main() {
 
     int entry_selected {0};
     std::vector<std::string> project_entries{
-        "project 1               ", "project 2", "project 3", "project 3" 
+        "project 1               ", "project 2", "project 3", "project 4" 
     };
+    std::vector<std::string> blog_entries{
+        "blog entry 1            ", "blog entry 2", "blog entry 3", "blog entry 4" 
+    };
+
     std::vector<std::string> project_descriptions {
         "project 1 desc.",  //tui portfolio
         "project 2 desc.",  //linux conf
@@ -33,9 +37,6 @@ int main() {
         "project 4 desc. ", 
     };
 
-    std::vector<std::string> blog_entries{
-        "blog entry 1               ", "blog entry 2", "blog entry 3", "blog entry 4" 
-    };
     std::vector<std::string> blog_content{
         "article 1 content",  
         "article 2 content",  
