@@ -2,10 +2,12 @@
 #include "ftxui/component/screen_interactive.hpp"  
 #include "ftxui/dom/elements.hpp"  
 #include <ftxui/component/component_base.hpp>
+#include <ftxui/component/event.hpp>
 #include <ftxui/dom/deprecated.hpp>
 #include <ftxui/dom/node.hpp>
 #include <ftxui/screen/screen.hpp>
 #include <ftxui/component/component.hpp>
+#include "ftxui/component/mouse.hpp"
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 #include <vector>
@@ -16,11 +18,11 @@ Component Project_Menu (std::vector<std::string>* entries, int* selected);
 int main() {
     std::string current_page = "home";
 
-    std::vector<int> project_selected{0, 1, 2, 3, 4};
+    int entry_selected {0};
     std::vector<std::string> project_entries{
         "Foo", "Bar", "Quux", "Baz" 
     };
-    auto project_menu = Project_Menu(&project_entries, &project_selected[0]);
+    auto project_menu = Project_Menu(&project_entries, &entry_selected);
 
     auto renderer = Renderer([&] {
             Element content;
@@ -69,10 +71,13 @@ int main() {
     auto screen = ScreenInteractive::Fullscreen();
     auto app = CatchEvent(renderer, [&](Event event) {
             if (event == Event::Character('h')) { current_page = "home";     return true; }
-            if (event == Event::Character('p')) { current_page = "projects"; return true; }
-            if (event == Event::Character('c')) { current_page = "contact";  return true; }
+            if (event == Event::Character('p')) { current_page = "projects"; entry_selected = 0;  return true; }
+            if (event == Event::Character('c')) { current_page = "contact";  entry_selected = 0; return true; }
             if (event == Event::Character('b')) { current_page = "blog";  return true; }
             if (event == Event::Character('q')) { screen.Exit();  }
+
+            if (event == Event::ArrowDown)      {++entry_selected;}
+            if (event == Event::ArrowUp)        {--entry_selected;}
             return false;
             });
     screen.Loop(app);
@@ -83,9 +88,6 @@ Component Project_Menu(std::vector<std::string>* entries, int* selected) {
   option.entries_option.transform = [](EntryState state) {
     state.label = (state.active ? "> " : "  ") + state.label;
     Element e = text(state.label);
-    if (state.focused) {
-      e = e | bgcolor(Color::Blue);
-    }
     if (state.active) {
       e = e | bold;
     }
