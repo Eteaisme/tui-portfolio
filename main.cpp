@@ -16,11 +16,13 @@ using namespace ftxui;
 Component Project_Menu (std::vector<std::string>* entries, int* selected);
 
 int main() {
+    std::vector<std::string> pages {"home", "projects", "contact", "blog" };
+    int page_selected {0};
     std::string current_page = "home";
 
     int entry_selected {0};
     std::vector<std::string> project_entries{
-        "Foo", "Bar", "Quux", "Baz" 
+        "Foo                   ", "Bar", "Quux", "Baz" 
     };
     auto project_menu = Project_Menu(&project_entries, &entry_selected);
 
@@ -31,11 +33,11 @@ int main() {
                         text("University of guelph. I enjoy specialty coffe, reading, music,"),
                         text("math and computers. Currently looking for W27 work.")
                     }) | center;
-            if (current_page == "projects")      content = hbox({
-                    text("Under construction...") | dim,
+            if (current_page == "projects") content = hbox({
                     project_menu->Render(),                         
-                    }) | center;
-            if (current_page == "blog")      content = hbox({
+                    separator(),
+                    });
+            if (current_page == "blog")  content = hbox({
                     text("Under construction...") | dim,
                     }) | center;
             if (current_page == "contact")       content = vbox({
@@ -71,13 +73,17 @@ int main() {
     auto screen = ScreenInteractive::Fullscreen();
     auto app = CatchEvent(renderer, [&](Event event) {
             if (event == Event::Character('h')) { current_page = "home";     return true; }
-            if (event == Event::Character('p')) { current_page = "projects"; entry_selected = 0;  return true; }
+            if (event == Event::Character('p')) { current_page = "projects"; entry_selected = 0; return true; }
             if (event == Event::Character('c')) { current_page = "contact";  entry_selected = 0; return true; }
-            if (event == Event::Character('b')) { current_page = "blog";  return true; }
-            if (event == Event::Character('q')) { screen.Exit();  }
+            if (event == Event::Character('b')) { current_page = "blog";     return true; }
 
-            if (event == Event::ArrowDown)      {++entry_selected;}
-            if (event == Event::ArrowUp)        {--entry_selected;}
+            if (event == Event::ArrowUp)        {--entry_selected; return true; }
+            if (event == Event::ArrowDown)      {++entry_selected; return true;}
+
+            //if (event == Event::ArrowLeft)      {--page_selected; current_page = pages[page_selected]; return true;}
+            //if (event == Event::ArrowRight)     {++page_selected; current_page = pages[page_selected]; return true;}
+
+            if (event == Event::Character('q')) { screen.Exit();  }
             return false;
             });
     screen.Loop(app);
