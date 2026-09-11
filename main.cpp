@@ -7,7 +7,6 @@
 #include <ftxui/dom/node.hpp>
 #include <ftxui/screen/screen.hpp>
 #include <ftxui/component/component.hpp>
-#include "ftxui/component/mouse.hpp"
 #include <ftxui/component/screen_interactive.hpp>
 #include <string>
 #include <vector>
@@ -19,7 +18,7 @@ Component Blog_Menu    (std::vector<std::string>* entries, int* selected);
 int main() {
 
     std::string current_page = "home";
-    std::vector<std::string> pages {"home", "projects", "contact", "blog" };
+    std::vector<std::string> pages {"home", "projects", "blog", "contact"};
     int page_selected {0};
 
     int entry_selected {0};
@@ -112,8 +111,8 @@ int main() {
             if (event == Event::ArrowUp)        {--entry_selected; return true; }
             if (event == Event::ArrowDown)      {++entry_selected; return true;}
 
-            //if (event == Event::ArrowLeft)      {--page_selected; current_page = pages[page_selected]; return true;}
-            //if (event == Event::ArrowRight)     {++page_selected; current_page = pages[page_selected]; return true;}
+            if (event == Event::ArrowLeft)      {page_selected == 0 ? page_selected = 0: --page_selected; current_page = pages[page_selected]; return true;}
+            if (event == Event::ArrowRight)     {page_selected == 3 ? page_selected = 3: ++page_selected; current_page = pages[page_selected];  return true;}
 
             if (event == Event::Character('q')) { screen.Exit();  }
             return false;
