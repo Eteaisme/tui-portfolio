@@ -11,7 +11,8 @@ FetchContent_MakeAvailable(ftxui)
 add_executable(main)
 target_sources(main
     PRIVATE
-        main.cpp
+        src/main.cpp
+        src/menu.cpp
 )
 target_link_libraries(main
     PRIVATE ftxui::screen
