@@ -1,5 +1,5 @@
 # tui-portfolio
-
+![](https://cdn.discordapp.com/attachments/692894496597344358/1549908080022524005/image.png?ex=6aac67e2&is=6aab1662&hm=233abd9f55db5d1e8c2044290352f10dd4ce59d38def9199ea98c8f8bf41c389&) 
 A terminal UI portfolio, served over SSH from a self-hosted home server.
 
 ```bash
