@@ -1,5 +1,5 @@
 # tui-portfolio
-![]() 
+![](image.png) 
 A terminal UI portfolio, served over SSH from a self-hosted home server.
 
 ```bash
