@@ -56,11 +56,11 @@ int main() {
                         text("math and computers. Currently looking for W27 work.")
                     }) | center;
             if (current_page == "projects") content = hbox({
-                        text("Nothing here yet...") | dim,  
-                    });
+                        text("Nothing here yet...") | dim | center,  
+                    }) | center;
             if (current_page == "blog")  content = hbox({
-                        text("Nothing here yet...") | dim,  
-                    });
+                        text("Nothing here yet...") | dim | center,  
+                    }) | center;
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text(" tame@uoguelph.ca") | bold}),
                     hbox({text("follow me at: "), text("Github.com/Eteaisme") | bold}),
