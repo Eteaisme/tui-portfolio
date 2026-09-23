@@ -56,20 +56,10 @@ int main() {
                         text("math and computers. Currently looking for W27 work.")
                     }) | center;
             if (current_page == "projects") content = hbox({
-                    project_menu->Render(),                         
-                    separator(),
-                    vbox({
-                            text(project_entries[entry_selected]) | bold, 
-                            text(project_descriptions[entry_selected]), 
-                            })
+                        text("Nothing here yet...") | dim,  
                     });
             if (current_page == "blog")  content = hbox({
-                    blog_menu->Render(),                         
-                    separator(),
-                    vbox({
-                    text(blog_entries[entry_selected]) | bold, 
-                    text(blog_content[entry_selected]), 
-                            })
+                        text("Nothing here yet...") | dim,  
                     });
             if (current_page == "contact")       content = vbox({
                     hbox({text("email me at: "), text(" tame@uoguelph.ca") | bold}),
